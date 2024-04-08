@@ -1,0 +1,16 @@
+epochs: 100
+lr1: 1e-3
+lr2: 1e-2
+wd1: 1e-4
+wd2: 1e-5
+hid_dim: 1024
+n_layers: 2
+temp: 0.9
+use_bn: false
+lam: 1.0
+alpha: 1.0
+epoch_f: 2000
+k: 5
+#k: 10
+
+#epochs_100, lr1_0.001, wd1_0.0001, lr2_0.01, wd2_1e-05, lam_0.0, alpha_0.5, k_5

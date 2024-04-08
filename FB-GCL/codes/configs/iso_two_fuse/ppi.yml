@@ -1,0 +1,12 @@
+epochs: 300
+lr1: 1e-4
+lr2: 0.005
+wd1: 1e-3
+wd2: 0
+hid_dim: 2048
+n_layers: 2
+temp: 0.7
+use_bn: false
+#lam: 0.7
+lam: 0.
+epoch_f: 500

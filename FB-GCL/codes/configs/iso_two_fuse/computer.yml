@@ -1,0 +1,28 @@
+epochs: 150
+lr1: 1e-4
+wd1: 1e-5
+lr2: 1e-2
+wd2: 1e-4
+hid_dim: 1024
+n_layers: 2
+temp: 0.5
+use_bn: false
+lam: 1.0
+alpha: 0.5
+epoch_f: 2000
+k: 5
+
+#raw
+#epochs: 200
+#lr1: 1e-4
+#wd1: 1e-5
+#lr2: 1e-2
+#wd2: 1e-4
+#hid_dim: 1024
+#n_layers: 2
+#temp: 0.5
+#use_bn: false
+#lam: 1.0
+#alpha: 0.5
+#epoch_f: 2000
+#k: 10

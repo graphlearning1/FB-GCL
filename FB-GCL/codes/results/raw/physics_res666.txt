@@ -1,0 +1,6 @@
+0
+Namespace(alpha=0.5, dataname='physics', device='cuda:0', gpu=0, lam=1, lr1=1e-05, use_mlp=False, wd1=0.0005)
+{'epochs': 300, 'lr1': '1e-5', 'wd1': '1e-4', 'lr2': '1e-3', 'wd2': '1e-4', 'hid_dim': 512, 'n_layers': 2, 'temp': 0.7, 'use_bn': True, 'epoch_test': 80, 'lam': 1.0, 'alpha': 0.5, 'epoch_f': 2000, 'k': 15}
+epochs_300, lr1_1e-05, wd1_0.0001, lr2_0.001, wd2_0.0001, lam_1.0, alpha_0.5
+1.0
+[0m
