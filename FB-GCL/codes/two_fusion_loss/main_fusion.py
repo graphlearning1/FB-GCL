@@ -200,17 +200,10 @@ if __name__ == '__main__':
             #     acc_list1.append(test_acc.cpu().numpy())
         test_acc = Evaluate(model, graph, g_x, feat, train_idx, val_idx, test_idx, max_epoch)
         acc_list2.append(test_acc.cpu().numpy())
-    final_acc, final_acc_std = np.mean(acc_list1), np.std(acc_list1)
-    print(f"# {50}_final_f1: {final_acc:.4f}±{final_acc_std:.4f}")
+
 
     final_acc, final_acc_std = np.mean(acc_list2), np.std(acc_list2)
-    print(f"# {100}_final_f1: {final_acc:.4f}±{final_acc_std:.4f}")
-
-    final_acc, final_acc_std = np.mean(acc_list3), np.std(acc_list3)
-    print(f"# {150}final_f1: {final_acc:.4f}±{final_acc_std:.4f}")
-
-    final_acc, final_acc_std = np.mean(acc_list4), np.std(acc_list4)
-    print(f"# {25}final_f1: {final_acc:.4f}±{final_acc_std:.4f}")
+    print(f"#final_f1: {final_acc:.4f}±{final_acc_std:.4f}")
 
 
 
