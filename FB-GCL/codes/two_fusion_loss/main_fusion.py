@@ -173,13 +173,6 @@ if __name__ == '__main__':
         g_x = g_x.remove_self_loop().add_self_loop()
 
         adj_rec = adj_label.clone()
-        for h in range(2):
-            adj_rec = torch.mm(adj_rec, adj_label)
-
-        # adj_rec = adj_rec * adj_label##TODO something wrong.
-        adj_rec = adj_rec * adj_label##
-
-        adj_rec = torch.where(adj_rec > 0, 1, 0).to(adj_rec.device)
 
         for epoch in range(epochs + 1):
             model.train()
