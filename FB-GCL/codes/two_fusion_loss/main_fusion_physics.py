@@ -213,57 +213,11 @@ if __name__ == '__main__':
             optimizer.step()
 
             print('Epoch={:03d}, loss={:.4f}'.format(epoch, loss.item()))
-            # if epoch % 10 == 0:
-            #     test_acc = Evaluate(model, graph, g_x, feat, train_idx, val_idx, test_idx, max_epoch)
-            # if epoch % 5 == 0:
-            # if epoch == epochs-10:
-            #     test_acc = Evaluate(model, graph, g_x, feat, train_idx, val_idx, test_idx, max_epoch)
-            #     acc_list1.append(test_acc.cpu().numpy())
-            # if epoch == epochs:
-            #     test_acc = Evaluate(model, graph, g_x, feat, train_idx, val_idx, test_idx, max_epoch)
-            #     acc_list2.append(test_acc.cpu().numpy())
-            # if epoch == epochs+10:
-            #     test_acc = Evaluate(model, graph, g_x, feat, train_idx, val_idx, test_idx, max_epoch)
-            #     acc_list3.append(test_acc.cpu().numpy())
-
-            if epoch == 400:
-                test_acc = Evaluate(model, graph, g_x, feat, train_idx, val_idx, test_idx, max_epoch)
-                acc_list1.append(test_acc.cpu().numpy())
-            if epoch == 200:
-                test_acc = Evaluate(model, graph, g_x, feat, train_idx, val_idx, test_idx, max_epoch)
-                acc_list2.append(test_acc.cpu().numpy())
-            if epoch == epochs:
-                test_acc = Evaluate(model, graph, g_x, feat, train_idx, val_idx, test_idx, max_epoch)
-                acc_list3.append(test_acc.cpu().numpy())
-            if epoch == 300:
-                test_acc = Evaluate(model, graph, g_x, feat, train_idx, val_idx, test_idx, max_epoch)
-                acc_list4.append(test_acc.cpu().numpy())
-            # if epoch == 50:
-            #     test_acc = Evaluate(model, graph, g_x, feat, train_idx, val_idx, test_idx, max_epoch)
-            #     acc_list3.append(test_acc.cpu().numpy())
-
-            # if epoch == 150:
-            #     test_acc = Evaluate(model, graph, g_x, feat, train_idx, val_idx, test_idx, max_epoch)
-            #     acc_list2.append(test_acc.cpu().numpy())
-            # if epoch == 200:
-            #     test_acc = Evaluate(model, graph, g_x, feat, train_idx, val_idx, test_idx, max_epoch)
-            #     acc_list3.append(test_acc.cpu().numpy())
-
-            # if epoch % 100 ==0:
-            #     test_acc = Evaluate(model, graph, g_x, feat, train_idx, val_idx, test_idx, max_epoch)
-        # test_acc = Evaluate(model, graph, g_x, feat, train_idx, val_idx, test_idx, max_epoch)
-        # acc_list1.append(test_acc.cpu().numpy())
-    final_acc, final_acc_std = np.mean(acc_list1), np.std(acc_list1)
-    print(f"# {400}_final_f1: {final_acc:.4f}±{final_acc_std:.4f}")
-
-    final_acc, final_acc_std = np.mean(acc_list2), np.std(acc_list2)
-    print(f"# {200}_final_f1: {final_acc:.4f}±{final_acc_std:.4f}")
-
-    final_acc, final_acc_std = np.mean(acc_list3), np.std(acc_list3)
-    print(f"# {epochs}final_f1: {final_acc:.4f}±{final_acc_std:.4f}")
+            test_acc = Evaluate(model, graph, g_x, feat, train_idx, val_idx, test_idx, max_epoch)
+            acc_list4.append(test_acc.cpu().numpy())
 
     final_acc, final_acc_std = np.mean(acc_list4), np.std(acc_list4)
-    print(f"# {300}final_f1: {final_acc:.4f}±{final_acc_std:.4f}")
+    print(f"#final_f1: {final_acc:.4f}±{final_acc_std:.4f}")
 
 
 
