@@ -196,10 +196,6 @@ if __name__ == '__main__':
 
 
             adj_rec = adj_label.clone()
-            for h in range(2):
-                adj_rec = torch.mm(adj_rec, adj_label)
-            adj_rec = adj_rec * adj_label
-            adj_rec = torch.where(adj_rec > 0, 1, 0).to(adj_rec.device)
 
             model.train()
             optimizer.zero_grad()
